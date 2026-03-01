@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SlackExportArchive — Slack exports, finally readable.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Slack exports, finally readable.</h1>
+      <p class="hero-subheadline">Turn a Slack export ZIP into a searchable, offline HTML archive in minutes. No Slack API. No uploads. No accounts.</p>
+      <div class="hero-ctas">
+        <a href="#demo" class="btn btn-primary" id="watch-demo" aria-label="Watch the 90-second demo">Watch the 90-second demo</a>
+        <a href="https://github.com/your-org/slack-export-archive/releases" class="btn btn-secondary" aria-label="Download or buy" target="_blank" rel="noopener noreferrer">Download / Buy</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="trust-strip">
+    <div class="container">
+      <ul class="trust-list">
+        <li>Runs 100% locally</li>
+        <li>Works with Enterprise exports</li>
+        <li>Designed for audits, investigations, and handoffs</li>
+      </ul>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" id="problem">
+      <div class="container">
+        <h2>Slack exports are not built for humans.</h2>
+        <p>They arrive as thousands of JSON files spread across folders, referenced by IDs instead of names. Searching, reviewing, or sharing this data with HR, legal, or auditors becomes manual, slow, and error-prone.</p>
+        <p><strong>If you've ever thought:</strong></p>
+        <ul>
+          <li>"How do I search this export?"</li>
+          <li>"How do I hand this to legal?"</li>
+          <li>"Why is this unreadable?"</li>
+        </ul>
+        <p>You're not alone.</p>
+      </div>
+    </section>
+
+    <section class="section" id="solution">
+      <div class="container">
+        <h2>This tool converts a Slack export ZIP into a clean, static HTML archive you can open in any browser.</h2>
+        <p>You get:</p>
+        <ul>
+          <li>Channel and DM navigation</li>
+          <li>User names resolved from IDs</li>
+          <li>Full-text search (including prefix search)</li>
+          <li>A folder you can share or archive</li>
+        </ul>
+        <p>No server. No cloud processing. Just files you control.</p>
+      </div>
+    </section>
+
+    <section class="section" id="demo">
+      <div class="container">
+        <h2>See it in action</h2>
+        <div class="demo-video">
+          <video controls src="assets/quick_demo.mp4" preload="metadata" title="90-second demo of SlackExportArchive">
+            Your browser does not support the video tag. <a href="assets/quick_demo.mp4">Download the demo video</a>.
+          </video>
+        </div>
+        <div class="screenshot">
+          <img src="assets/screenshot.png" alt="Search results and conversation view" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <h2>How it works</h2>
+        <p class="section-intro">Keep it boring.</p>
+        <ol class="steps-list">
+          <li>Drop in your Slack export ZIP</li>
+          <li>Generate the archive locally</li>
+          <li>Search, review, and share the output folder</li>
+        </ol>
+        <p>That's it.</p>
+      </div>
+    </section>
+
+    <section class="section" id="who-its-for">
+      <div class="container">
+        <h2>Who this is for</h2>
+        <p class="section-intro">This tool is built for people who need answers, not dashboards.</p>
+        <ul>
+          <li><strong>IT & Workspace Admins</strong></li>
+          <li><strong>Compliance and HR reviews</strong></li>
+          <li><strong>Legal or internal investigations</strong></li>
+          <li><strong>Slack migrations and workspace shutdowns</strong></li>
+        </ul>
+        <p>If you need something HR or legal can actually read, this is for you.</p>
+      </div>
+    </section>
+
+    <section class="section" id="local-first">
+      <div class="container">
+        <h2>Why local matters</h2>
+        <p class="section-intro">Most tools require uploading exports to third-party servers. This one doesn't.</p>
+        <ul>
+          <li>Your data never leaves your machine</li>
+          <li>No Slack tokens required</li>
+          <li>Safe for sensitive or regulated environments</li>
+          <li>Works offline and in air-gapped setups</li>
+        </ul>
+        <p>You stay in control.</p>
+      </div>
+    </section>
+
+    <section class="section" id="whats-included">
+      <div class="container">
+        <h2>What's included</h2>
+        <ul>
+          <li>Static HTML archive output</li>
+          <li>Channel, DM, and message timelines</li>
+          <li>User and channel name resolution</li>
+          <li>Fast, offline full-text search</li>
+          <li>Enterprise export compatibility</li>
+          <li>File-link manifest (what's referenced vs missing)</li>
+        </ul>
+        <p>No subscriptions. No surprises.</p>
+      </div>
+    </section>
+
+    <section class="section" id="guarantees">
+      <div class="container">
+        <h2>Guarantees</h2>
+        <ul>
+          <li><strong>Deterministic output</strong> — same input, same archive</li>
+          <li><strong>No background services or telemetry</strong></li>
+          <li><strong>No data collection, ever</strong></li>
+        </ul>
+        <p>If it doesn't work on your export, you'll know immediately.</p>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <dl class="faq-list">
+          <dt>What exports are supported?</dt>
+          <dd>Standard and Enterprise Grid Slack exports. The tool expects the standard export ZIP structure.</dd>
+
+          <dt>Does it include private channels?</dt>
+          <dd>Yes. If the export contains private channels (and you have access in the export), they are included in the archive.</dd>
+
+          <dt>What about files and attachments?</dt>
+          <dd>The tool produces a file-link manifest showing what's referenced vs missing. Slack exports do not include file contents; the manifest helps you track what was shared.</dd>
+
+          <dt>Does it work offline?</dt>
+          <dd>Yes. The generator runs locally. The output is static HTML you can open in any browser without an internet connection.</dd>
+
+          <dt>Is my data secure?</dt>
+          <dd>Your data never leaves your machine. No uploads, no Slack tokens, no cloud processing.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="download">
+      <div class="container">
+        <h2>Turn your Slack export into something usable.</h2>
+        <div class="hero-ctas">
+          <a href="#demo" class="btn btn-primary" aria-label="Watch the demo">Watch the demo</a>
+          <a href="https://github.com/your-org/slack-export-archive/releases" class="btn btn-secondary" aria-label="Download or buy" target="_blank" rel="noopener noreferrer">Download / Buy</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav aria-label="Footer navigation">
+        <a href="https://github.com/your-org/slack-export-archive#readme" target="_blank" rel="noopener noreferrer">Documentation</a>
+        <a href="https://github.com/your-org/slack-export-archive" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/your-org/slack-export-archive/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">License</a>
+        <a href="mailto:contact@slackexportarchive.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href="#demo"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
