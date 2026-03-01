@@ -144,13 +144,13 @@
         <h2>FAQ</h2>
         <dl class="faq-list">
           <dt>What exports are supported?</dt>
-          <dd>Standard and Enterprise Grid Slack exports. The tool expects the standard export ZIP structure.</dd>
+          <dd>Slack exports in the standard ZIP structure. The archive includes whatever data is present in your export.</dd>
 
-          <dt>Does it include private channels?</dt>
-          <dd>Yes. If the export contains private channels (and you have access in the export), they are included in the archive.</dd>
+          <dt>Does it include private channels or DMs?</dt>
+          <dd>Usually not. Most workspaces using Slack's Standard Export only include public channel messages and file links. Private channels, DMs/group DMs, and edit/deletion logs are only included when Slack provides an approved Compliance/Enterprise export (or another Slack-approved export that contains that data). This tool does not bypass Slack's export restrictions.</dd>
 
           <dt>What about files and attachments?</dt>
-          <dd>The tool produces a file-link manifest showing what's referenced vs missing. Slack exports do not include file contents; the manifest helps you track what was shared.</dd>
+          <dd>Slack exports typically include file metadata and links, not the raw file contents. The tool generates a file-link manifest showing what's referenced vs missing so you can track what was shared.</dd>
 
           <dt>Does it work offline?</dt>
           <dd>Yes. The generator runs locally. The output is static HTML you can open in any browser without an internet connection.</dd>
