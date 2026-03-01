@@ -58,14 +58,14 @@ body {
 
 .hero h1 {
   margin: 0 0 var(--space-lg);
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
-  font-weight: 600;
+  font-size: clamp(1.85rem, 5.5vw, 2.75rem);
+  font-weight: 700;
   line-height: 1.2;
 }
 
 .hero-subheadline {
   margin: 0 0 var(--space-xl);
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--color-text-muted);
   max-width: 36em;
   margin-left: auto;
@@ -77,6 +77,13 @@ body {
   flex-wrap: wrap;
   gap: var(--space-md);
   justify-content: center;
+  margin-top: var(--space-lg); /* moves CTAs down slightly */
+}
+
+.hero-pricing {
+  margin: var(--space-md) 0 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
 }
 
 /* Buttons */
@@ -185,7 +192,8 @@ a:focus-visible {
 }
 
 .section li {
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+  line-height: 1.7;
 }
 
 .section p {
@@ -245,6 +253,12 @@ a:focus-visible {
   height: auto;
   border-radius: var(--radius);
   border: 1px solid var(--color-border);
+}
+
+.screenshot-caption {
+  margin: var(--space-sm) 0 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
 }
 
 /* FAQ */
