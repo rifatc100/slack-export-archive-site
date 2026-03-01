@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SlackExportArchive — Slack exports, finally readable.</title>
+  <title>SlackExportArchive — Audit-ready Slack archives</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="hero">
     <div class="container">
-      <h1>Slack exports, finally readable.</h1>
-      <p class="hero-subheadline">Turn a Slack export ZIP into a searchable, offline HTML archive in minutes. No Slack API. No uploads. No accounts.</p>
+      <h1>Turn Slack exports into audit-ready records.</h1>
+      <p class="hero-subheadline">Generate a deterministic, read-only, offline Slack archive suitable for audits, investigations, and long-term retention.</p>
+      <ul class="trust-list">
+        <li>No Slack API. No uploads. No accounts.</li>
+        <li>Deterministic static HTML output.</li>
+        <li>Designed for audits, investigations, and handoffs.</li>
+      </ul>
       <div class="hero-ctas">
         <a href="#demo" class="btn btn-primary" id="watch-demo" aria-label="Watch the 90-second demo">Watch the 90-second demo</a>
         <a href="https://github.com/rifatc100/slack-export-archive/releases" class="btn btn-secondary" aria-label="Download or buy" target="_blank" rel="noopener noreferrer">Download / Buy</a>
@@ -22,8 +27,8 @@
     <div class="container">
       <ul class="trust-list">
         <li>Runs 100% locally</li>
-        <li>Works with Enterprise exports</li>
-        <li>Designed for audits, investigations, and handoffs</li>
+        <li>Works with standard and Enterprise export formats</li>
+        <li>Permanent artifact, not a session</li>
       </ul>
     </div>
   </section>
@@ -31,8 +36,9 @@
   <main>
     <section class="section" id="problem">
       <div class="container">
-        <h2>Slack exports are not built for humans.</h2>
-        <p>They arrive as thousands of JSON files spread across folders, referenced by IDs instead of names. Searching, reviewing, or sharing this data with HR, legal, or auditors becomes manual, slow, and error-prone.</p>
+        <h2>Slack exports are not built for review, audits, or evidence.</h2>
+        <p>They arrive as thousands of JSON files spread across folders, referenced by IDs instead of names. The result is unreadable and unsearchable for HR, legal, compliance, and auditors.</p>
+        <p>Most "Slack viewers" help you browse an export. They do not produce an artifact you can rely on.</p>
         <p><strong>If you've ever thought:</strong></p>
         <ul>
           <li>"How do I search this export?"</li>
@@ -45,14 +51,16 @@
 
     <section class="section" id="solution">
       <div class="container">
-        <h2>This tool converts a Slack export ZIP into a clean, static HTML archive you can open in any browser.</h2>
+        <h2>This tool generates a static Slack archive you can rely on.</h2>
         <p>You get:</p>
         <ul>
-          <li>Channel and DM navigation</li>
-          <li>User names resolved from IDs</li>
-          <li>Full-text search (including prefix search)</li>
-          <li>A folder you can share or archive</li>
+          <li>Deterministic, read-only HTML output</li>
+          <li>User and channel names resolved from IDs</li>
+          <li>Offline full-text search (including prefix search)</li>
+          <li>Shareable folder suitable for review or retention</li>
+          <li>File-link manifest for attachment tracking</li>
         </ul>
+        <p>The output is a folder of static files — not an app, not a session, not a browser toy.</p>
         <p>No server. No cloud processing. Just files you control.</p>
       </div>
     </section>
@@ -74,11 +82,11 @@
     <section class="section" id="how-it-works">
       <div class="container">
         <h2>How it works</h2>
-        <p class="section-intro">Keep it boring.</p>
+        <p class="section-intro">No servers. No processing pipelines. No state.</p>
         <ol class="steps-list">
           <li>Drop in your Slack export ZIP</li>
           <li>Generate the archive locally</li>
-          <li>Search, review, and share the output folder</li>
+          <li>Hand the output to HR, legal, auditors, or archive it long-term</li>
         </ol>
         <p>That's it.</p>
       </div>
@@ -87,7 +95,7 @@
     <section class="section" id="who-its-for">
       <div class="container">
         <h2>Who this is for</h2>
-        <p class="section-intro">This tool is built for people who need answers, not dashboards.</p>
+        <p class="section-intro">This tool is not for casual browsing. It is for situations where accuracy, traceability, and offline access matter.</p>
         <ul>
           <li><strong>IT & Workspace Admins</strong></li>
           <li><strong>Compliance and HR reviews</strong></li>
@@ -101,14 +109,14 @@
     <section class="section" id="local-first">
       <div class="container">
         <h2>Why local matters</h2>
-        <p class="section-intro">Most tools require uploading exports to third-party servers. This one doesn't.</p>
+        <p class="section-intro">Uploading Slack exports to third-party servers is often not allowed. Browser-only viewers are ephemeral and unverifiable.</p>
         <ul>
           <li>Your data never leaves your machine</li>
           <li>No Slack tokens required</li>
           <li>Safe for sensitive or regulated environments</li>
           <li>Works offline and in air-gapped setups</li>
         </ul>
-        <p>You stay in control.</p>
+        <p>Everything happens locally, and the result is a permanent artifact.</p>
       </div>
     </section>
 
@@ -131,9 +139,9 @@
       <div class="container">
         <h2>Guarantees</h2>
         <ul>
-          <li><strong>Deterministic output</strong> — same input, same archive</li>
-          <li><strong>No background services or telemetry</strong></li>
-          <li><strong>No data collection, ever</strong></li>
+          <li><strong>Deterministic output</strong> — same input ZIP, same archive</li>
+          <li><strong>Read-only, static files</strong> — no mutation, no state</li>
+          <li><strong>No telemetry, no analytics, no data collection</strong></li>
         </ul>
         <p>If it doesn't work on your export, you'll know immediately.</p>
       </div>
@@ -143,6 +151,9 @@
       <div class="container">
         <h2>FAQ</h2>
         <dl class="faq-list">
+          <dt>How is this different from browser-based Slack viewers?</dt>
+          <dd>Browser-based viewers are session-based tools for casual exploration. This tool generates a deterministic, static archive that can be reviewed, shared, and retained independently of the tool itself.</dd>
+
           <dt>What exports are supported?</dt>
           <dd>Slack exports in the standard ZIP structure. The archive includes whatever data is present in your export.</dd>
 
@@ -163,7 +174,7 @@
 
     <section class="section cta-section" id="download">
       <div class="container">
-        <h2>Turn your Slack export into something usable.</h2>
+        <h2>Turn your Slack export into an audit-ready archive.</h2>
         <div class="hero-ctas">
           <a href="#demo" class="btn btn-primary" aria-label="Watch the demo">Watch the demo</a>
           <a href="https://github.com/rifatc100/slack-export-archive/releases" class="btn btn-secondary" aria-label="Download or buy" target="_blank" rel="noopener noreferrer">Download / Buy</a>
