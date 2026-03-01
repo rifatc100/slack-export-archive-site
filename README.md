@@ -1,6 +1,6 @@
 # SlackExportArchive — Landing Page
 
-Static marketing site for [SlackExportArchive](https://github.com/your-org/slack-export-archive): turn a Slack export ZIP into a searchable, offline HTML archive.
+Static marketing site for [SlackExportArchive](https://github.com/rifatc100/slack-export-archive): turn a Slack export ZIP into a searchable, offline HTML archive.
 
 ## Structure
 
