@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SlackExportArchive — Audit-ready Slack archives</title>
+  <title>SlackExportArchive — Tamper-Evident Slack Archive Generator for IT & Compliance</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,14 +13,14 @@
       <p class="hero-subheadline">Generate a deterministic, read-only, offline Slack archive suitable for audits, investigations, and long-term retention.</p>
       <ul class="trust-list">
         <li>No Slack API. No uploads. No accounts.</li>
-        <li>Deterministic static HTML output.</li>
+        <li>Tamper-evident integrity manifest with SHA-256 verification.</li>
         <li>Designed for audits, investigations, and handoffs.</li>
       </ul>
       <div class="hero-ctas">
         <a href="#demo" class="btn btn-primary" id="watch-demo" aria-label="Watch the 90-second demo">Watch the 90-second demo</a>
         <a href="https://github.com/rifatc100/slack-export-archive/releases" class="btn btn-secondary" aria-label="Download or buy" target="_blank" rel="noopener noreferrer">Download / Buy</a>
       </div>
-      <p class="hero-pricing">One-time license. No subscription.</p>
+      <p class="hero-pricing">Solo $29/month · Professional $79/month · annual plans available</p>
     </div>
   </header>
 
@@ -97,7 +97,7 @@
     <section class="section" id="who-its-for">
       <div class="container">
         <h2>Who this is for</h2>
-        <p class="section-intro">This tool is not for casual browsing. It is for situations where accuracy, traceability, and offline access matter.</p>
+        <p class="section-intro">Built for IT admins, compliance teams, and legal counsel — not casual browsing.</p>
         <ul>
           <li><strong>IT & Workspace Admins</strong></li>
           <li><strong>Compliance and HR reviews</strong></li>
@@ -132,8 +132,10 @@
           <li>Fast, offline full-text search</li>
           <li>Enterprise export compatibility</li>
           <li>File-link manifest (what's referenced vs missing)</li>
+          <li>Tamper-evident _archive_manifest.json with SHA-256 hash of every output file</li>
+          <li>Investigation Summary Report — participants, channels, date range, warnings</li>
         </ul>
-        <p>No subscriptions. No surprises.</p>
+        <p>Solo $29/month · Professional $79/month · annual plans available</p>
       </div>
     </section>
 
@@ -144,6 +146,7 @@
           <li><strong>Deterministic output</strong> — same input ZIP, same archive</li>
           <li><strong>Read-only, static files</strong> — no mutation, no state</li>
           <li><strong>No telemetry, no analytics, no data collection</strong></li>
+          <li><strong>Integrity verification</strong> — run <code>verify</code> on any output to confirm it was not modified since generation</li>
         </ul>
         <p>If it doesn't work on your export, you'll know immediately.</p>
       </div>
@@ -170,6 +173,9 @@
 
           <dt>Is my data secure?</dt>
           <dd>Your data never leaves your machine. No uploads, no Slack tokens, no cloud processing.</dd>
+
+          <dt>How do I verify the archive hasn't been tampered with?</dt>
+          <dd>Every build produces a _archive_manifest.json containing the SHA-256 hash of every output file and a root hash covering the entire archive. Run <code>verify --out &lt;folder&gt;</code> against any output to confirm all files are byte-for-byte identical to what was generated. If a single file was modified, verify exits with a mismatch and identifies which file changed.</dd>
         </dl>
       </div>
     </section>
