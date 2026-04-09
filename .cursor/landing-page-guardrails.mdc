@@ -1,3 +1,25 @@
 ---
 alwaysApply: true
 ---
+# Landing Page Guardrails
+
+Scope:
+- Static marketing site only.
+- No backend, no framework, no build step.
+
+Hard rules:
+- Do not introduce JS frameworks or bundlers.
+- Do not add tracking, analytics, or cookies.
+- Do not add AI mentions or buzzwords.
+- Keep everything deployable as static HTML/CSS.
+
+Goals:
+- Fast load
+- Clear copy
+- High trust for compliance / admin buyers
+
+Output:
+- index.html
+- styles.css
+- assets/
+- README.md with Cloudflare Pages deploy steps
